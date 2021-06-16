@@ -90,7 +90,7 @@ invalidate() // onDraw를 호출함
 ### Runnable, handler, post, removeCallbacks
 ~~~kotlin
 // Runnable : 수행할 동작을 정의
-private val Action: Runnable = object: Runnable {
+private val action: Runnable = object: Runnable {
 	override fun run() {
 
 		if (!isReplaying) {
@@ -105,8 +105,8 @@ private val Action: Runnable = object: Runnable {
 		handler?.postDelayed(this, ACTION_INTERVAL)
 	}
 }
-// Action을 실행
-handler?.post(Action)
-// Action 실행을 취소
-handler?.removeCallbacks(Action)
+// action을 실행
+handler?.post(action)
+// action 실행을 취소
+handler?.removeCallbacks(action)
 ~~~
